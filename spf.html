@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#006875",
+                      "surface-container-high": "#dfe8ff",
+                      "primary": "#005faa",
+                      "secondary-fixed-dim": "#00daf3",
+                      "tertiary-fixed": "#d7e3fc",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#101c2e",
+                      "tertiary-container": "#6c778d",
+                      "on-secondary-container": "#00616d",
+                      "error": "#ba1a1a",
+                      "surface-container": "#e7eeff",
+                      "surface-container-highest": "#d7e3fc",
+                      "outline": "#717783",
+                      "background": "#f9f9ff",
+                      "tertiary-fixed-dim": "#bbc7df",
+                      "on-primary-container": "#ffffff",
+                      "inverse-primary": "#a3c9ff",
+                      "on-surface": "#101c2e",
+                      "surface-container-low": "#f0f3ff",
+                      "primary-fixed-dim": "#a3c9ff",
+                      "inverse-on-surface": "#ecf0ff",
+                      "surface-bright": "#f9f9ff",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed": "#9cf0ff",
+                      "primary-fixed": "#d3e3ff",
+                      "on-secondary-fixed": "#001f24",
+                      "surface-variant": "#d7e3fc",
+                      "on-primary-fixed": "#001c39",
+                      "on-background": "#101c2e",
+                      "secondary-container": "#00e3fd",
+                      "outline-variant": "#c0c7d4",
+                      "surface-dim": "#cfdaf3",
+                      "on-tertiary-container": "#ffffff",
+                      "tertiary": "#535e73",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f9f9ff",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#0078d4",
+                      "inverse-surface": "#253144",
+                      "on-primary-fixed-variant": "#004883",
+                      "on-tertiary-fixed-variant": "#3c475b",
+                      "on-surface-variant": "#404752",
+                      "surface-tint": "#0060ab",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed-variant": "#004f58"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9ff; color: #101c2e; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .gradient-primary { background: linear-gradient(135deg, #005faa 0%, #00e3fd 100%); }
+        .hero-mesh { background: radial-gradient(at 0% 0%, rgba(0, 95, 170, 0.15) 0%, transparent 50%), radial-gradient(at 100% 100%, rgba(0, 227, 253, 0.1) 0%, transparent 50%); }
+        .curriculum-card:hover { transform: translateY(-4px); }
+        .ambient-shadow { box-shadow: 0 12px 40px rgba(16, 28, 46, 0.06); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">
+                Hosted by MEGAZONE CLOUD
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-cyan-400 font-semibold border-b-2 border-blue-700 dark:border-cyan-400 pb-1 font-body" href="#home">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-colors font-body" href="#sessions">Sessions</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-colors font-body" href="#curriculum">Curriculum</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-colors font-body" href="#faq">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-slate-600 font-medium hover:text-primary transition-all px-4 py-2 font-body">Sign In</button>
+<button class="gradient-primary text-white font-semibold px-6 py-2.5 rounded-full hover:opacity-90 active:scale-[0.98] transition-all font-body">Register Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden hero-mesh" id="home">
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-semibold text-xs tracking-wider uppercase mb-6">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        온라인 웨비나 시리즈 · 5주 완성
+                    </div>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1] mb-8">
+                        AI Agent Era, <br/><span class="text-primary">M365 Copilot</span> Business Agent Lessons
+                    </h1>
+<p class="text-on-surface-variant text-xl mb-10 leading-relaxed font-body">
+                        매주 수요일 오후 4시~5시, PT+Demo 중심의 실전 웨비나로 M365 에이전트를 처음부터 끝까지 마스터합니다
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="gradient-primary text-white font-bold px-8 py-4 rounded-full text-lg ambient-shadow hover:opacity-95 transition-all font-body">웨비나 등록하기</button>
+<button class="bg-surface-container-highest text-on-surface font-bold px-8 py-4 rounded-full text-lg hover:bg-surface-container-high transition-all font-body">세션 살펴보기</button>
+</div>
+</div>
+</div>
+<!-- Abstract Hero Image Element -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full hidden lg:block">
+<div class="relative w-full h-full">
+<img alt="Futuristic AI interface" class="w-full h-full object-cover rounded-l-[4rem] opacity-90" data-alt="Abstract 3D visualization of glowing neural network nodes with blue and cyan light streaks on a deep navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Olr8W8L4K9eNlHvjKDV-PdHdGf6h98qLWZxrEbQPrbvevhkBpLomJsEF3KvOAE6TUA0yjVqOciFvlttmHEvmVPWWkA42DJIK4hQekJWiJS5CzmlEwvAGdYZv4qoVm0qq7MUwHimGlaggM8vippRGJbF772UcK98k1p-aDkoGkMeUB5lXWmshFmydjwDT13T6JY5TW6uCrp7ih7bR9AUIoeDQyrMB6f8OyXwOoVS305Y2kKgAmcGurVH0LaPyA8wb6x9LaZKdI1OP"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Key Benefits -->
+<section class="py-24 bg-surface" id="sessions">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="p-10 rounded-[2rem] bg-surface-container-lowest border border-outline-variant/15 hover:border-primary/40 transition-all duration-300 group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">이런 분께 추천</h3>
+<p class="text-on-surface-variant leading-relaxed font-body">M365 Copilot 도입 예정/초기 기업 실무자, IT 관리자, 업무 자동화에 관심 있는 비즈니스 유저</p>
+</div>
+<!-- Card 2 -->
+<div class="p-10 rounded-[2rem] bg-surface-container-lowest border border-outline-variant/15 hover:border-primary/40 transition-all duration-300 group">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">PT + Demo 실전</h3>
+<p class="text-on-surface-variant leading-relaxed font-body">매 세션 라이브 데모와 함께 진행. 실제 사용 경험 중심으로 체감하고 바로 적용할 수 있습니다</p>
+</div>
+<!-- Card 3 -->
+<div class="p-10 rounded-[2rem] bg-surface-container-lowest border border-outline-variant/15 hover:border-primary/40 transition-all duration-300 group">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed-dim/20 flex items-center justify-center text-secondary-fixed-dim mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">calendar_view_week</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">5주 연속 설계</h3>
+<p class="text-on-surface-variant leading-relaxed font-body">기본 활용 → SharePoint 에이전트 → 새 에이전트 → 업무 자동화 → 설계 지침까지 점진적 심화</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Curriculum Section -->
+<section class="py-32 bg-surface-container-low" id="curriculum">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h2 class="font-headline text-4xl lg:text-5xl font-extrabold text-on-surface mb-6 tracking-tight">5주 커리큘럼</h2>
+매주 수요일 오후 4시~5시, Microsoft Teams에서 진행됩니다
+
+</div>
+<div class="space-y-8">
+<!-- Week 1 -->
+<div class="curriculum-card bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] flex flex-col lg:flex-row gap-8 items-start transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex-shrink-0">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4 font-headline">WEEK 01</span>
+<div class="text-on-surface-variant font-body text-sm font-semibold">4월 8일 (수) 4시~5시</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline text-2xl lg:text-3xl font-bold text-on-surface mb-6">만들지 않아도 바로 쓰는 미리 빌드된 M365 에이전트 활용</h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">무료 Copilot Chat vs 유료 Copilot 차이 정리</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">미리 빌드된 M365 에이전트 종류 소개</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">리서치 도구 vs 분석가 에이전트 Demo</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">Copilot Chat vs M365 에이전트 결과 비교</span>
+</li>
+</ul>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Office workspace with modern laptop displaying cloud technology dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsbFd-1GoMezHQQDjE_3j2ZAshbkHzsaapYZ-cEblXvv-GQa7lrsHXqPpgP4XbPHm-3nASyQOMjW64VRGEbSifFA1HlHIRhqk_uQtsHI8AU13ke6ckG7wIDlyK4W6S-QIXU6IDPRBMrQyAF2uc5-4OP-SwaqSxNz9cePYU6x-IrQjjAI8EEw0ee2YGL3Oz7bRaaP2DD6JgxOuxj35L0PuZTo9ZXx2sJ3kDuM1PnS9QQp5ODTf7n1qGxjsuKb6vrHyo68pUvtzIbjJ9"/>
+</div>
+</div>
+<!-- Week 2 -->
+<div class="curriculum-card bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] flex flex-col lg:flex-row gap-8 items-start transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex-shrink-0">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4 font-headline">WEEK 02</span>
+<div class="text-on-surface-variant font-body text-sm font-semibold">4월 15일 (수) 4시~5시</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline text-2xl lg:text-3xl font-bold text-on-surface mb-6">우리 회사 문서를 이해하게 만드는 SharePoint 기본 지식 <span class="whitespace-nowrap">에이전트</span></h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">SharePoint 에이전트의 역할과 한계</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">에이전트 생성 흐름 전체 구조</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">프로젝트 사이트 기반 에이전트 생성 (Demo)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">정책/가이드/보고서 질의응답</span>
+</li>
+</ul>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Data server room with blinking blue lights representing digital knowledge base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjtBusIGnuNxdIwB2hRn_yURriH8FPHHytFjQhAZTo3lOzR_2LKn1j0y9mWYu1mpLLD5nxXSyj7qM34f7JAHrCHeVwjTrJ9H-vN5kDEmXAFVI9Ts6Nmle00hbC4_XfZWNPEwrBVxNmsRDWWUHI7KfIupDT4A2hao6qBEqdgTzCq4sHdzEanExV0xLlt4seTiD4bmQ13tsK3tYRMOoG3PcfYMU9DE6ALOknW6GIw01GqH7BO1klPOKcWPkOOeD3epWoQ4FZZza4cc4I"/>
+</div>
+</div>
+<!-- Week 3 -->
+<div class="curriculum-card bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] flex flex-col lg:flex-row gap-8 items-start transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex-shrink-0">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4 font-headline">WEEK 03</span>
+<div class="text-on-surface-variant font-body text-sm font-semibold">4월 22일 (수) 4시~5시</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline text-2xl lg:text-3xl font-bold text-on-surface mb-6">[새 에이전트]로 만드는 에이전트 세상
+</h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">새 에이전트 메뉴 구조 이해</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">에이전트 설계의 요소</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">에이전트 생성 (Demo)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">As-Is / To-Be 비교</span>
+</li>
+</ul>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Close up of robotic hand interacting with digital screen interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACdShiJCB3vo5ji5K0z6KIVRkcurY1yvYrMMlX68-gl-z5MrAvg0h_sgHrqM26trerbIxofwPFZF7ITYUFlfrf675BSPkyNeQLDPfXQPq12EK07YMAmxLnheUNSdal8II3K_rTAulQQx5QyK0xmlucNi_3IAEJUn7KYqzUy6nMP0H7Z7wyXR2KFm_DMfvSrJmlEzQpAGCufrFIMbjZDHFQHhCLy3DnCoobaDpk3FliZXDzYShL7OHSCesmpyuMCELkIgpWCI4gj9YW"/>
+</div>
+</div>
+<!-- Week 4 -->
+<div class="curriculum-card bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] flex flex-col lg:flex-row gap-8 items-start transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex-shrink-0">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4 font-headline">WEEK 04</span>
+<div class="text-on-surface-variant font-body text-sm font-semibold">4월 29일 (수) 4시~5시</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline text-2xl lg:text-3xl font-bold text-on-surface mb-6">판단·정리·보고를 대신하는 에이전트 활용</h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">반복 업무 패턴 재 정리</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">시나리오 Demo</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">여러 직무 확장 예시</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">에이전트를 여러 개로 나눠야 하는 이유
+</span>
+</li>
+</ul>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Dynamic data analytics dashboard with colorful charts and financial graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDruqCT4Y0IJvJ3PuocMQiE1IhBvQCVAWi5CsMT0W-pC2SEJhSsmFPo86hf19TJABP2O918lPJcmn9a5t2HWBzmKTeOnhOziizmKkpHvM8ZzIwGhOj74unVhKH49UZNIWSHjQatrOfzohOm-17mK7VOQFM4YJhSlvuhg1J0ZnbUgLoWO15Ob12wwezb1QWMcJNyNrY8DN-mORhIEA-EwEPcoXcs5H_KjhMwxcFD6C_fnM9H9Rl7Oof242a_GxtTC097QMqEA7PVQ0Wo"/>
+</div>
+</div>
+<!-- Week 5 -->
+<div class="curriculum-card bg-surface-container-lowest p-8 lg:p-12 rounded-[2rem] flex flex-col lg:flex-row gap-8 items-start transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex-shrink-0">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4 font-headline">WEEK 05</span>
+<div class="text-on-surface-variant font-body text-sm font-semibold">5월 6일 (수) 4시~5시</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline text-2xl lg:text-3xl font-bold text-on-surface mb-6">같은 에이전트인데, 왜 결과가 다를까? 설계의 모든 것!</h3>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">잘 안 되는 에이전트의 공통점</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">좋은 에이전트 지침의 구조
+</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">실전 꿀팁!
+</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+<span class="text-on-surface-variant font-body">전체 과정 정리 & 다음 단계 제안
+</span>
+</li>
+</ul>
+</div>
+<div class="hidden lg:block w-32 h-32 rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="Close up of developer coding on high resolution monitor in dark workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu4VhXesZsJN3BaeBAxdj-Q9PznRxgY6aTqwudOud2l9QhuuS7jgPnrgnah1mEly8F_7mHtuY3jOy_o_PKG9UC4u3xzPdIWm3orA3Bwum5ojlU8QLetMB-IiGiqZsw-A2hp26_EXLZD0-hMIsrkv11MWpkGWiO74rLZ_mGsWs0KHdQrs-110AnB1IgL6CurPgY6HCx6cs-8DELVWmUqaFmBj7ctbrDew7bWirYrGS_DZBz695wm72Bl2DhrU9b62e08gmSRMnPWlPZ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto gradient-primary rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden ambient-shadow">
+<div class="relative z-10">
+<h2 class="font-headline text-4xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight">Master M365 Agent in 5 Weeks!</h2>
+<p class="text-white/80 font-body text-lg mb-12 max-w-2xl mx-auto">매주 수요일 오후 4시, 1시간 투자로 에이전트 설계부터 실전 활용까지. <br />무료 온라인 웨비나입니다.</p>
+<button class="bg-white text-primary font-bold px-12 py-5 rounded-full text-xl hover:bg-surface-container-low transition-all active:scale-95 font-body">지금 등록하기</button>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-secondary-fixed-dim/20 blur-3xl"></div>
+</div>
+</section>
+<!-- Partners -->
+<section class="pb-24 pt-12">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest mb-12"> </p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl text-slate-700">cloud</span>
+<span class="font-headline text-2xl font-extrabold tracking-tight text-slate-900">MEGAZONE CLOUD</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full py-12 px-6 border-t border-slate-200/15 dark:border-slate-800/15">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+<div>
+<div class="text-lg font-bold text-slate-900 dark:text-white font-headline mb-2">M365 Copilot Editorial</div>
+<p class="text-slate-500 dark:text-slate-400 font-body text-sm">© 2026 M365 Copilot Editorial. Powered by Megazone Cloud &amp; Microsoft.</p>
+</div>
+<div class="flex justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-all font-body text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-all font-body text-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex justify-center md:justify-end gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-all font-body text-sm" href="#">Sponsorship</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-300 transition-all font-body text-sm" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>
