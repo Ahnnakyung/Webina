@@ -88,15 +88,15 @@
         .glass-nav { backdrop-filter: blur(24px); }
       </style>
 </head>
-<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container" id="top">
 <!-- TopNavBar (Shared Component) -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm shadow-blue-900/5 transition-all duration-300">
 <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
 <div class="text-xl font-bold tracking-tight text-blue-900 dark:text-white font-headline">Hosted by MEGAZONE CLOUD</div>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-blue-700 dark:text-cyan-400 font-semibold border-b-2 border-blue-700 dark:border-cyan-400 pb-1 font-body" href="#">Home</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-cyan-400 transition-colors font-body" href="#sessions">Sessions</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-cyan-400 transition-colors font-body" href="#curriculum">Curriculum</a>
+<a class="nav-link text-blue-700 dark:text-cyan-400 font-semibold border-b-2 border-blue-700 dark:border-cyan-400 pb-1 transition-all duration-300 font-body" href="#top">Home</a>
+<a class="nav-link text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-cyan-400 border-b-2 border-transparent pb-1 transition-all duration-300 font-body" href="#sessions">Sessions</a>
+<a class="nav-link text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-cyan-400 border-b-2 border-transparent pb-1 transition-all duration-300 font-body" href="#curriculum">Curriculum</a>
 </div>
 <div class="flex items-center gap-4">
 <a class="bg-gradient-to-br from-primary to-primary-container text-white font-semibold px-6 py-2.5 rounded-full hover:opacity-90 active:scale-[0.98] transition-all font-body inline-block" href="https://events.teams.microsoft.com/event/404087dc-cf1a-46ba-9ac6-3fac963ab91b@97f42f55-f1db-4804-b1eb-08db083efd4f" target="_blank" rel="noopener noreferrer">
@@ -344,4 +344,21 @@
 </div>
 </div>
 </footer>
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  const activeClasses = ['text-blue-700', 'dark:text-cyan-400', 'font-semibold', 'border-blue-700', 'dark:border-cyan-400'];
+  const inactiveClasses = ['text-slate-600', 'dark:text-slate-400', 'border-transparent'];
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.forEach((item) => {
+        item.classList.remove(...activeClasses);
+        item.classList.add(...inactiveClasses);
+      });
+
+      link.classList.remove(...inactiveClasses);
+      link.classList.add(...activeClasses);
+    });
+  });
+</script>
 </body></html>
